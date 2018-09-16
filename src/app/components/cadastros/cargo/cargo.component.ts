@@ -1,3 +1,4 @@
+import { CargoService } from './../../../services/cadastros/cargo.service';
 import { Component, OnInit } from '@angular/core';
 import { Cargo } from '../../../classes/cadastros/cargo';
 
@@ -11,11 +12,11 @@ export class CargoComponent implements OnInit {
   cargos: Cargo[];
   cols: any[];
 
-  constructor() { }
+  constructor(private cargoService: CargoService) { }
 
   ngOnInit() {
 
-    this.cargos = [];
+    this.cargos = this.cargoService.getCargos();
 
     this.cols = [
       { field: 'id', header: 'Código' },
@@ -23,7 +24,7 @@ export class CargoComponent implements OnInit {
       { field: 'descricao', header: 'Descrição' },
       { field: 'salario', header: 'Salário' },
       { field: 'cbo1994', header: 'CBO 1994' },
-      { field: 'cbo2002', header: 'CBO 2002' }
+      { field: 'cbo2001', header: 'CBO 2001' }
     ];
   }
 

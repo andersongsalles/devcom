@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ToolbarModule } from 'primeng/toolbar';
 import { AccordionModule } from 'primeng/accordion';
 import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TableModule } from 'primeng/table';
     BrowserAnimationsModule,
     ToolbarModule,
     AccordionModule,
-    TableModule
+    TableModule,
+    ButtonModule
     
   ],
   providers: [],

@@ -4,5 +4,5 @@ export class Cargo {
   descricao: string;
   salario: number;
   cbo1994: string;
-  cbo2001: string;
+  cbo2002: string;
 }

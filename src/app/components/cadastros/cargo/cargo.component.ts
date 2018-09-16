@@ -11,6 +11,8 @@ export class CargoComponent implements OnInit {
 
   cargos: Cargo[];
   cols: any[];
+  cargoSelecionado: Cargo;
+  botoesDesabilitados: boolean = true;
 
   constructor(private cargoService: CargoService) { }
 
@@ -24,8 +26,17 @@ export class CargoComponent implements OnInit {
       { field: 'descricao', header: 'Descrição' },
       { field: 'salario', header: 'Salário' },
       { field: 'cbo1994', header: 'CBO 1994' },
-      { field: 'cbo2001', header: 'CBO 2001' }
+      { field: 'cbo2002', header: 'CBO 2002' }
     ];
   }
+
+  onRowSelect(event) {
+    this.botoesDesabilitados = false;
+  }
+
+  onRowUnselect(event) {
+    this.botoesDesabilitados = true;
+  }
+
 
 }

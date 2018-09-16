@@ -18,7 +18,7 @@ export class CargoService {
       cargo.descricao = 'Descrição ' + i;
       cargo.salario = i * 5;      
       cargo.cbo1994 = 'CBO 1994 ' + i;      
-      cargo.cbo2001 = 'CBO 2001 ' + i;
+      cargo.cbo2002 = 'CBO 2002 ' + i;
 
       this.cargos.push(cargo);
     }    
